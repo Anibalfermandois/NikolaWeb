@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import banner1 from '../assets/banner1.jpg'
+
+---
+
+<section id="inicio" class="relative pt-16">
+  <!-- Carousel Container -->
+  <div class="relative overflow-hidden bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+    <div class="carousel-track flex transition-transform duration-700 ease-in-out">
+      <!-- Slide 1 -->
+      <div class="carousel-slide min-w-full relative h-[600px] md:h-[700px] lg:h-[600px]">
+
+        <!-- Optimized Background Image -->
+        <Image
+          src={banner1}
+          alt="Banner 1"
+          class="absolute inset-0 w-full h-full object-fill"
+          sizes="(max-width: 640px) 100vw, 50vw"
+          loading="eager"
+        />
+
+        <!-- Overlay Content -->
+        <div class="relative px-4 py-20 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              Soluciones Profesionales para tu Empresa
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 text-white-100">
+              Transformamos tus ideas en realidad con servicios de alta calidad
+            </p>
+            <a 
+              href="/cotizar" 
+              class="inline-block bg-primary-500 text-white-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary-50 transition-colors"
+            >
+              Cotizar Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide min-w-full">
+        <div class="relative px-4 py-20 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              Experiencia y Confianza
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 text-primary-100">
+              Más de 10 años brindando servicios excepcionales a nuestros clientes
+            </p>
+            <a 
+              href="/cotizar" 
+              class="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition-colors"
+            >
+              Cotizar Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide min-w-full">
+        <div class="relative px-4 py-20 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              Innovación y Calidad
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 text-primary-100">
+              Utilizamos las últimas tecnologías para ofrecerte los mejores resultados
+            </p>
+            <a 
+              href="/cotizar" 
+              class="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-50 transition-colors"
+            >
+              Cotizar Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Navigation -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="0"></button>
+      <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="1"></button>
+      <button class="carousel-indicator w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" data-slide="2"></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  const track = document.querySelector('.carousel-track');
+
+  function updateCarousel() {
+    if (track) {
+      (track as any).style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    indicators.forEach((indicator, index) => {
+      if (index === currentSlide) {
+        indicator.classList.add('bg-opacity-100');
+        indicator.classList.remove('bg-opacity-50');
+      } else {
+        indicator.classList.add('bg-opacity-50');
+        indicator.classList.remove('bg-opacity-100');
+      }
+    });
+  }
+
+  // Auto-advance carousel
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+
+  // Manual navigation
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlide = index;
+      updateCarousel();
+    });
+  });
+
+  // Initialize
+  updateCarousel();
+</script>
