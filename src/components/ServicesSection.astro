@@ -1,46 +1,37 @@
 ---
+import Image from 'astro/components/Image.astro'
+import boleta from '../assets/boletaNikola.png'
+
 ---
 
 <section id="servicios" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Image Column -->
-      <div class="order-2 lg:order-1">
-        <img 
-          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" 
-          alt="Servicios profesionales" 
-          class="rounded-lg shadow-xl w-full h-96 object-cover"
-        >
-      </div>
 
       <!-- Content Column -->
-      <div class="order-1 lg:order-2">
-        <h2 class="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
-          Servicios de Calidad Premium
+      <div class="order-1 lg:order-1">
+        <h2 class="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6 align-middle">
+          ENERGÍA SOLAR PARA TU CASA
         </h2>
         <p class="text-lg text-secondary-600 mb-8 leading-relaxed">
-          Ofrecemos una amplia gama de servicios profesionales diseñados para satisfacer las necesidades específicas de tu empresa. Nuestro equipo de expertos trabaja con dedicación para entregarte resultados excepcionales que superen tus expectativas.
+         En Nikola <strong> diseñamos e instalamos proyectos solares personalizados</strong>
+        para casas y pymes en Chile, ayudando a nuestros clientes a <strong>ahorrar
+        en su cuenta de luz </strong> tecnología fotovoltaica de <strong>alta eficiencia</strong>.
         </p>
-        <div class="space-y-4 mb-8">
-          <div class="flex items-center">
-            <div class="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
-            <span class="text-secondary-700">Consultoría especializada</span>
-          </div>
-          <div class="flex items-center">
-            <div class="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
-            <span class="text-secondary-700">Implementación de soluciones</span>
-          </div>
-          <div class="flex items-center">
-            <div class="w-2 h-2 bg-primary-600 rounded-full mr-3"></div>
-            <span class="text-secondary-700">Soporte continuo</span>
-          </div>
-        </div>
+        
         <a 
           href="/cotizar" 
-          class="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors"
+          class="inline-block bg-primary-600 text-white px-8 py-3 rounded-full text-1xl font-bold hover:bg-primary-700 transition-colors"
         >
-          Cotizar Servicios
+          COTIZA TU PROYECTO SOLAR
         </a>
+      </div>
+      <!-- Image Column -->
+      <div class="order-2 lg:order-2">
+        <Image 
+          src={boleta}
+          alt="Servicios profesionales" 
+        />
       </div>
     </div>
   </div>
