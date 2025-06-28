@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from '@sections/Navbar.astro';
+import Footer from '@sections/Footer.astro';
 ---
 
 <Layout title="Cotizar - Solicita tu Presupuesto | MiEmpresa">
@@ -225,11 +225,12 @@ import Footer from '../components/Footer.astro';
         let isValid = true;
         
         requiredFields.forEach(field => {
-          if (!field.value.trim()) {
+          const input = field as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+          if (!input.value.trim()) {
             isValid = false;
-            field.classList.add('border-red-500');
+            input.classList.add('border-red-500');
           } else {
-            field.classList.remove('border-red-500');
+            input.classList.remove('border-red-500');
           }
         });
         
