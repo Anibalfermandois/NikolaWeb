@@ -1,8 +1,6 @@
 ---
 import Whatsapp from "@components/Whatsapp.astro";
 import Bell from "@components/Bell.astro";
-
-
 ---
 
 <!doctype html>
@@ -15,47 +13,50 @@ import Bell from "@components/Bell.astro";
     <link rel="icon" type="image/svg+xml+png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>Nikola</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="font-sans antialiased">
-    <Whatsapp/>
-    <Bell/>
+    <Whatsapp />
+    <Bell />
 
     <slot />
-    
+
     <script>
       // Smooth scrolling for navigation links
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         // Fix links
         const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
-          link.addEventListener('click', function(e: Event) {
+        links.forEach((link) => {
+          link.addEventListener("click", function (e: Event) {
             e.preventDefault();
             const target = e.currentTarget as HTMLAnchorElement;
-            const targetId = target.getAttribute('href')?.substring(1);
+            const targetId = target.getAttribute("href")?.substring(1);
             if (!targetId) return;
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
               targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: "smooth",
+                block: "start",
               });
             }
           });
         });
 
         // Mobile menu toggle
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
         if (menuButton && mobileMenu) {
-          menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+          menuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
           });
         }
       });
-    </script> 
+    </script>
   </body>
 </html>

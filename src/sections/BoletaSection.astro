@@ -1,37 +1,37 @@
 ---
-import Image from 'astro/components/Image.astro'
-import boleta from '../assets/boletaNikola.png'
-
+import Image from "astro/components/Image.astro";
+import boleta from "../assets/boletaNikola.png";
 ---
 
-<section id="servicios" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-
+<section id="servicios" class="bg-white py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid items-center gap-12 lg:grid-cols-2">
       <!-- Content Column -->
       <div class="order-1 lg:order-1">
-        <h2 class="text-3xl sm:text-4xl font-bold text-secondary-100 mb-6 align-middle">
+        <h2
+          class="mb-6 align-middle text-3xl font-bold text-secondary-100 sm:text-4xl"
+        >
           ENERGÍA SOLAR PARA TU CASA
         </h2>
-        <p class="text-lg text-secondary-100 mb-8 leading-relaxed">
-         En Nikola <strong> diseñamos e instalamos proyectos solares personalizados</strong>
-        para casas y pymes en Chile, ayudando a nuestros clientes a <strong>ahorrar
-        en su cuenta de luz </strong> tecnología fotovoltaica de <strong>alta eficiencia</strong>.
+        <p class="mb-8 text-lg leading-relaxed text-secondary-100">
+          En Nikola <strong>
+            diseñamos e instalamos proyectos solares personalizados</strong
+          >
+          para casas y pymes en Chile, ayudando a nuestros clientes a <strong
+            >ahorrar en su cuenta de luz
+          </strong> tecnología fotovoltaica de <strong>alta eficiencia</strong>.
         </p>
-        
-        <a 
-          href="/cotizar" 
-          class="inline-block bg-primary-100 text-white px-8 py-3 rounded-full text-1xl font-bold hover:bg-primary-100 transition-colors"
+
+        <a
+          href="/cotizar"
+          class="text-1xl inline-block rounded-full bg-primary-100 px-8 py-3 font-bold text-white transition-colors hover:bg-primary-100"
         >
           COTIZA TU PROYECTO SOLAR
         </a>
       </div>
       <!-- Image Column -->
       <div class="order-2 lg:order-2">
-        <Image 
-          src={boleta}
-          alt="Servicios profesionales" 
-        />
+        <Image src={boleta} alt="Servicios profesionales" />
       </div>
     </div>
   </div>

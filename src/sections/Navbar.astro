@@ -8,14 +8,14 @@ const text = {
   servicios: "Servicios",
   financiamiento: "Financiamiento",
   nosotros: "Nosotros",
-  cotizar: "Cotizar",
+  cotizar: "COTIZA TU PROYECTO SOLAR",
   numero: "+56956480000",
 };
 ---
 
-<nav class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
+<nav class="fixed left-0 right-0 top-0 z-50 bg-white shadow-lg">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
       <div class="flex-shrink-0">
         <a href="/">
           <Image src={logo} alt="logo Nikola" width={130} height={100} />
@@ -23,38 +23,38 @@ const text = {
       </div>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden items-center space-x-8 md:flex">
         <a
           href="/#inicio"
-          class="text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.inicio}
         </a>
         <a
           href="/#servicios"
-          class="text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.servicios}
         </a>
         <a
           href="/#financiamiento"
-          class="text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.financiamiento}
         </a>
         <a
           href="/#nosotros"
-          class="text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.nosotros}
         </a>
         <a
           href="tel:+1234567890"
-          class="block px-5 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-bold"
+          class="block px-5 py-2 font-bold text-secondary-100 transition-colors hover:text-primary-100"
         >
           <span
             ><Image
-              class="inline text-primary-100 fill-current"
+              class="inline fill-current text-primary-100"
               src={phoneIcon}
               alt="phone icon"
               width={20}
@@ -64,7 +64,7 @@ const text = {
         </a>
         <a
           href="/cotizar"
-          class="bg-primary-100 text-white px-6 py-2 rounded-lg hover:bg-primary-100 transition-colors font-medium"
+          class="rounded-lg bg-primary-100 px-6 py-2 font-medium text-white transition-colors hover:bg-primary-100"
         >
           {text.cotizar}
         </a>
@@ -94,41 +94,41 @@ const text = {
 
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+      <div class="space-y-1 border-t bg-white px-2 pb-3 pt-2 sm:px-3">
         <a
           href="#inicio"
-          class="block px-3 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="block px-3 py-2 font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.inicio}
         </a>
         <a
           href="#servicios"
-          class="block px-3 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="block px-3 py-2 font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.servicios}
         </a>
         <a
           href="#financiamiento"
-          class="block px-3 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="block px-3 py-2 font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.financiamiento}
         </a>
         <a
           href="#nosotros"
-          class="block px-3 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-medium"
+          class="block px-3 py-2 font-medium text-secondary-100 transition-colors hover:text-primary-100"
         >
           {text.nosotros}
         </a>
         <a
           href="tel:+1234567890"
-          class="block px-5 py-2 text-secondary-100 hover:text-primary-100 transition-colors font-bold"
+          class="block px-5 py-2 font-bold text-secondary-100 transition-colors hover:text-primary-100"
         >
-          <span class="text-primary-100 font-bold">📞</span>
+          <span class="font-bold text-primary-100">📞</span>
           {text.numero}
         </a>
         <a
           href="/cotizar"
-          class="block mx-3 mt-2 bg-primary-100 text-white px-4 py-2 rounded-lg hover:bg-primary-100 transition-colors font-medium text-center"
+          class="mx-3 mt-2 block rounded-lg bg-primary-100 px-4 py-2 text-center text-xl font-medium text-white transition-colors hover:bg-primary-100"
         >
           {text.cotizar}
         </a>

@@ -4,18 +4,23 @@ import Techo from "@assets/dibujos/Techo.png";
 import Suelo from "@assets/dibujos/Suelo.png";
 import Carport from "@assets/dibujos/Carport.png";
 ---
-<div class=" mx-auto px-2 py-8 bg-slate-700 rounded-md">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 md:gap-16 lg:gap-32">
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+
+<div class="mx-auto rounded-md bg-slate-700 px-2 py-8">
+  <div
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 md:gap-16 lg:gap-32"
+  >
+    <div class="group relative overflow-hidden rounded-lg shadow-lg">
       <Image
         src={Techo}
         alt="Techo"
-        class="w-full h-48 object-contain transform scale-90 group-hover:scale-95 transition-transform duration-300"
+        class="h-48 w-full scale-90 transform object-contain transition-transform duration-300 group-hover:scale-95"
       />
       <div
-        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2"
+        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 px-4 py-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
-        <span class="text-white text-sm md:text-md font-semibold text-center max-h-40 overflow-y-auto">
+        <span
+          class="md:text-md max-h-40 overflow-y-auto text-center text-sm font-semibold text-white"
+        >
           Se aprovecha el espacio disponible del techo. El sistema se adapta a
           las necesidades del cliente, instalando el equipo según el consumo
           energético. Pueden ser en diferentes tipos de techos, como teja
@@ -24,16 +29,18 @@ import Carport from "@assets/dibujos/Carport.png";
       </div>
     </div>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <div class="group relative overflow-hidden rounded-lg shadow-lg">
       <Image
         src={Suelo}
         alt="Suelo"
-        class="w-full h-48 object-contain transform scale-90 group-hover:scale-95 transition-transform duration-300"
+        class="h-48 w-full scale-90 transform object-contain transition-transform duration-300 group-hover:scale-95"
       />
       <div
-        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2"
+        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 px-4 py-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
-        <span class="text-white text-sm md:text-md font-semibold text-center max-h-40 overflow-y-auto">
+        <span
+          class="md:text-md max-h-40 overflow-y-auto text-center text-sm font-semibold text-white"
+        >
           Se instala en terrenos de la propiedad, aprovechando espacios
           disponibles para generar energía. Es importante considerar que la
           instalación incluye un cerco perimetral de altura mínima 60 cm.
@@ -41,16 +48,18 @@ import Carport from "@assets/dibujos/Carport.png";
       </div>
     </div>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg group">
+    <div class="group relative overflow-hidden rounded-lg shadow-lg">
       <Image
         src={Carport}
         alt="Carport"
-        class="w-full h-48 object-contain transform scale-90 group-hover:scale-95 transition-transform duration-300"
+        class="h-48 w-full scale-90 transform object-contain transition-transform duration-300 group-hover:scale-95"
       />
       <div
-        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-4 py-2"
+        class="absolute inset-0 flex items-center justify-center bg-secondary-80 bg-opacity-60 px-4 py-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       >
-        <span class="text-white text-sm md:text-md font-semibold text-center max-h-40 overflow-y-auto">
+        <span
+          class="md:text-md max-h-40 overflow-y-auto text-center text-sm font-semibold text-white"
+        >
           Es una estructura cubierta con paneles fotovoltaicos instalada sobre
           un estacionamiento. Este sistema no solo proporciona sombra para los
           vehículos, sino que también genera energía solar.
