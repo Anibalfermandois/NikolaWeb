@@ -1,10 +1,27 @@
 ---
-import ConnectedDots from "@components/connectedDots.astro"
-import ImageGalerry from '@components/ImageGallery.astro'
+import ConnectedDots from "@components/connectedDots.astro";
+import ImageGalerry from "@components/ImageGallery.astro";
+import Dibujos from "@components/Dibujos.astro";
 ---
+
 <section id="financiamiento" class="py-20 bg-secondary-100">
-  <ConnectedDots/>
-  <div class="h-10"></div>
-  <ImageGalerry/>
-  
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-whiteNik">
+        PROYECTO “LLAVE EN MANO”
+      </h2>
+      <p class="text-lg text-white font-semibold max-w-3xl mx-auto">
+        En Nikola ofrecemos una solución solar completa: diseño, instalación,
+        equipos de calidad, trámites y conexión según la Ley Net Billing, sin
+        letra chica.
+      </p>
+    </div>
+
+    <Dibujos />
+  <div class="h-10"/>
+    <ConnectedDots />
+    <div class="h-10"></div>
+    <ImageGalerry />
+  </div>
 </section>

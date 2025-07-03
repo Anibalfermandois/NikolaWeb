@@ -11,7 +11,7 @@ const images = Object.values(import.meta.glob('@assets/galeriaComponent/*'));
     {images.map((src, i) => (
         
 
-        <div key={i} class="overflow-hidden rounded-lg shadow-lg">
+        <div class="overflow-hidden rounded-lg shadow-lg">
         <Image
           src={src() as any}
           alt={`Galería ${i + 1}`}
