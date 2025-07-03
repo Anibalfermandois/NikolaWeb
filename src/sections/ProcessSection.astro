@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import ConnectedDots from "@components/connectedDots.astro";
-import ImageGalerry from "@components/ImageGallery.astro";
+import ImageGalerry from "@components/Casas-Empresas.astro";
 import Dibujos from "@components/Dibujos.astro";
+import Chile from '@assets/chile.png'
 ---
 
 <section id="financiamiento" class="bg-secondary-100 py-20">
@@ -23,5 +25,23 @@ import Dibujos from "@components/Dibujos.astro";
     <ConnectedDots />
     <div class="h-10"></div>
     <ImageGalerry />
-  </div>
+
+   <div class="text-white text-xl font-bold bg-backgroundBlur rounded-full mx-4 grid grid-cols-3 gap-x-8 items-center justify-center  pr-6 py-3 text-center ">
+  <span>
+    <span class="text-2xl font-extrabold">+400</span>
+    <span class="ml-2 align-middle">Clientes</span>
+  </span>
+  <span>
+    <span class="text-2xl font-extrabold align-middle">+3.500</span>
+    <span class="ml-2 align-middle">kWp Instalados</span>
+  </span>
+  <span>
+    <span class="text-2xl font-extrabold align-middle">+1.452</span>
+    <span class="ml-2 align-middle">t de CO₂ evitados</span>
+  </span>
+</div>
+<div>
+  <Image src={Chile} alt="chile"/>
+</div>
+</div>
 </section>

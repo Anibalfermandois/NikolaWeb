@@ -15,10 +15,12 @@ export default {
         },
 
         whiteNik: "#e6e6e6",
+        backgroundBlur: '#2F495B'
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
+      
     },
   },
   plugins: [],

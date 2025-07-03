@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import baterias from "@assets/baterias.png";
+---
+
+<section id="Respaldo" class="bg-white py-20 relative">
+  <button
+    class="bg-primary-44 text-white text-2xl font-bold absolute rounded-full px-9 py-1 -top-5 left-1/2 -translate-x-1/2"
+  >
+    ADICIONALES
+  </button>
+  <h2 class="font-bold">RESPALDO ENERGÉTICO</h2>
+  <div>
+    <span>HUAWEI LUNA 2000</span>
+    <span>5 / 10 / 15 kWh</span>
+    <Image src={baterias} alt="respaldo baterias" />
+    <span>BATERÍAS</span>
+    <span
+      >Incluyen sistema de monitoreo, funcionan ante cortes de luz y aumentan tu
+      autoconsumo gracias a su reserva energética.</span
+    >
+  </div>
+</section>
